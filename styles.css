@@ -149,6 +149,24 @@ img {
     content: "💃💃💃";
 }
 
+.full {
+    /* Position it, change the width/height, background color */
+    /* How should it "display" the children maybe in "flexible" way? */
+    background: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
 
 /* @media queries for Responsive Web Design. */
 @media(max-width: 1000px) {

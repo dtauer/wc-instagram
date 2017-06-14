@@ -70,21 +70,44 @@
     </div>
     <!-- End of Images Area -->
 
-    <script>
-        //Create an event for when the window is scrolled
-        window.addEventListener('scroll', function(){
-            var distance = window.pageYOffset || document.documentElement.scrollTop
-            var header = document.querySelector('header')
+    <div class="full hidden">
+        <img src="" alt="">
+    </div>
 
-            // If the window has scrolled more that 200 pixels, add the .header--small class to the header
-            // Otherwise, remove the .header--small class
-            if(distance > 200){
-                header.classList.add('header--small')
-            } else {
-                header.classList.remove('header--small')
-            }
+
+    <script src="scripts.js"></script>
+
+    <!-- 
+        
+<script>
+    // Use fetch() to load remote data
+    fetch('http://unsplash.it/list')
+    .then(result => {
+        return result.json() //convert the text into JSON data
+    })
+    .then(result => {
+        //Now that we have the data, we can work with it
+        // Initializing and empty array to hold our random numbers
+        let randoms = []
+        //Loop 20 times, each time putting a random number in the array
+        for(let i=0; i<20; i++) {
+            //Generate Random: Math.round(Math.random() * 30)
+            randoms.push( Math.round(Math.random()*result.length) )
+        }
+        //Make an images array to store our random images
+        let images = result.filter(image => {
+            return randoms.includes(image.id)
         })
-    </script>
+        console.log(randoms,images)
+    })
+    /*.catch(error => {
+        console.log('somethign went wrong!!!!')
+    })*/
+
+</script>
+
+
+    -->
 
 </body>
 </html>

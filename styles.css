@@ -26,6 +26,7 @@ body {
     flex-wrap: wrap;
 }
 
+/* Check to see if the browser supports CSS Grid. If so the CSS inside the @supports wrapper will be included */
 @supports(display:grid) or (display: -ms-grid) {
     .images .inner {
         display: -ms-grid;
@@ -149,6 +150,7 @@ img {
 }
 
 
+/* @media queries for Responsive Web Design. */
 @media(max-width: 1000px) {
     .inner {
         padding-left: 1em;

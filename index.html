@@ -42,8 +42,9 @@
             </div>
         </div>
     </div>
+    <!-- End of User Profile Area -->
 
-    <!-- Images -->
+    <!-- Images Area -->
     <div class="images">
         <div class="inner">
             <a href="" class="image"><img src="http://unsplash.it/320/?image=99" alt="">
@@ -67,11 +68,16 @@
             </a>
         </div>
     </div>
+    <!-- End of Images Area -->
 
     <script>
+        //Create an event for when the window is scrolled
         window.addEventListener('scroll', function(){
             var distance = window.pageYOffset || document.documentElement.scrollTop
             var header = document.querySelector('header')
+
+            // If the window has scrolled more that 200 pixels, add the .header--small class to the header
+            // Otherwise, remove the .header--small class
             if(distance > 200){
                 header.classList.add('header--small')
             } else {

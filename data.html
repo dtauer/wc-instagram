@@ -31,7 +31,57 @@
         /*.catch(error => {
             console.log('somethign went wrong!!!!')
         })*/
+
+
+        /*function promise1(){
+            return new Promise(function(resolve, reject){
+                setTimeout(function(){
+                    console.log('first')
+                    resolve()
+                }, 4000)
+            })
+            
+        }
+
+        function promise2(){
+            return new Promise(function(resolve, reject){
+                setTimeout(function(){
+                    console.log('second')
+                    resolve()
+                }, 6000)
+            })
+            
+        }
+
+        function promise3(){
+            return new Promise(function(resolve, reject){
+                setTimeout(function(){
+                    console.log('thrid')
+                    resolve()
+                }, 2000)
+            })
+        }*/
+
+        
+        /*promise1()
+        .then(promise2)
+        .then(promise3)
+        .then(function(){
+            console.log('DONE!')
+        })
+        .catch(function(error){
+            console.log('something went wrong!')
+        })*/
+
+        /*Promise.all([promise1, promise2, promise3])
+        .then(function(){
+            console.log('DONE!')
+        })
+        .catch(function(error){
+            console.log('something went wrong!')
+        })*/
     
+
     </script>
 </body>
 </html>

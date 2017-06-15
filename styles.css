@@ -40,7 +40,7 @@ body {
 
 .image {
     position: relative;
-    line-height: 0;
+    display: inherit; /* fix extra line space */
     overflow:hidden;
 }
 

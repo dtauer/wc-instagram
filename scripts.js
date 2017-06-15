@@ -32,7 +32,7 @@ function addErrorEvents(){
     const images = document.querySelectorAll('.image img')
     images.forEach( (image, index) => {
         image.addEventListener('error', () => {
-            image.src = `http://unsplash.it/300/?image=580`
+            image.src = `https://unsplash.it/300/?image=580`
         })
     })
 }
@@ -42,7 +42,7 @@ const showFullImage = id => {
     const fullContainer = document.querySelector('.full')
     const fullImage = fullContainer.querySelector('img')
     //Set the src of the fullImage to be a bigger version
-    fullImage.src = `http://unsplash.it/600/?image=${id}`
+    fullImage.src = `https://unsplash.it/600/?image=${id}`
     //Remove the hidden class from the fullContainer to show it
     fullContainer.classList.remove('hidden')
 }
@@ -60,7 +60,7 @@ fullContainer.addEventListener('click', function(){
 // then convert to JSON
 // Then grab 20 random images
 // then add images to HTML and call addClickEvents()
-fetch('http://unsplash.it/list')
+fetch('https://unsplash.it/list')
 .then( result => result.json() )
 .then(result => {
     let randoms = []
@@ -84,7 +84,7 @@ function populateImages(imageArray) {
     // maybe just console.log somethign to make sure it working
     imageArray.forEach( (image, index) => {
         const html = `<a href="" class="image">
-                        <img src="http://unsplash.it/320/?image=${image.id}" alt="${image.author}">
+                        <img src="https://unsplash.it/320/?image=${image.id}" alt="${image.author}">
                         <span class="image__cover">View Image</span>
                      </a>`
         imageContainer.innerHTML += html
